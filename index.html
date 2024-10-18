@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_stepik</title>
+</head>
+
+<body>
+    <style>
+        .container{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+            background-color: #F9F9F9;
+            max-width: 400px;
+            padding-bottom: 20px;
+        }
+
+        .container>*{
+            margin-left: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: lighter;
+        }
+
+        .user-form{
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input,textarea,select, button {
+            width: 90%;
+            height: 30px;
+            padding: 0;
+            border: 1px solid black;
+        }
+        #message {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .submit:hover{
+            background-color:#C9C9C9;
+        }
+    </style>
+
+    <div class="container">
+        <h2>Обратная связь</h2>
+        <form class="user-form" action="./test.html" method="post">
+
+            <label for="topic">Тема обращения</label>
+            <select name="topic" id="topic">
+                <option>Выберите вариант</option>
+                <option value="Жалоба">Жалоба</option>
+                <option value="Пожелания">Пожелания</option>
+                <option value="Прочее">Прочее</option>
+            </select>
+            
+            <label for="username">Ваше имя</label>
+            <input type="text" id="username" name="username" required placeholder="">
+            <label for="email">Ваш email</label>
+            <input type="email" id="email" name="email" required placeholder="">
+            <label for="message">Сообщение</label>
+            <textarea name="message" id="message"></textarea>
+            <button class="submit" type="submit">Отправить</button>
+        </form>
+    </div>
+    
+
+</body>
+
+</html>
